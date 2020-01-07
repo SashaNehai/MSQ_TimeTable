@@ -24,7 +24,7 @@ class ArrivalsViewController: UIViewController {
 	   super.viewDidLoad()
 		arrivalsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "arrivalCell")
 
-		
+		let network = NetworkManager()
 	   network.getFlightInfo(infoUrl: "https://airport.by/en/timetable/online-arrival") { flightInfo [weak self] in
 		  self?.flightInfo = flightInfo
 		  self?.tableView.reloadData()
