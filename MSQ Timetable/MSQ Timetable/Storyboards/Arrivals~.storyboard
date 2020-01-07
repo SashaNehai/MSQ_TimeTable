@@ -1,46 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tAA-Ft-7ua">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Depatures-->
-        <scene sceneID="Hjt-y8-ql5">
-            <objects>
-                <viewController id="VXb-Vf-JJl" customClass="DepaturesViewController" customModule="MSQ_Timetable" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C34-vK-L6M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nex-go-Bsa">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="VXb-Vf-JJl" id="VfH-5L-MHS"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="1yi-Ez-Zb3" firstAttribute="trailing" secondItem="Nex-go-Bsa" secondAttribute="trailing" id="6fT-Ob-F9G"/>
-                            <constraint firstItem="1yi-Ez-Zb3" firstAttribute="bottom" secondItem="Nex-go-Bsa" secondAttribute="bottom" id="QfW-x0-xuQ"/>
-                            <constraint firstItem="Nex-go-Bsa" firstAttribute="leading" secondItem="1yi-Ez-Zb3" secondAttribute="leading" id="idE-iE-UAk"/>
-                            <constraint firstItem="Nex-go-Bsa" firstAttribute="top" secondItem="1yi-Ez-Zb3" secondAttribute="top" id="n9P-Pc-vIV"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="1yi-Ez-Zb3"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Depatures" id="UW8-99-Trh"/>
-                    <connections>
-                        <outlet property="depaturesTableView" destination="Nex-go-Bsa" id="RJX-uw-xOC"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mIt-Cy-1JX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1451" y="356"/>
-        </scene>
         <!--Arrivals-->
         <scene sceneID="Fr7-Gr-cNV">
             <objects>
@@ -86,40 +52,29 @@
                     </tabBar>
                     <connections>
                         <segue destination="CPq-Dh-XMS" kind="relationship" relationship="viewControllers" id="r6Q-jX-NYc"/>
-                        <segue destination="Ziz-Bm-DRo" kind="relationship" relationship="viewControllers" id="Sel-EN-mRm"/>
-                        <segue destination="IkL-zs-2x2" kind="relationship" relationship="viewControllers" id="iZd-1e-Tl1"/>
+                        <segue destination="h97-yQ-YLh" kind="relationship" relationship="viewControllers" id="Sel-EN-mRm"/>
+                        <segue destination="Eaw-qr-ncH" kind="relationship" relationship="viewControllers" id="iZd-1e-Tl1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDc-p2-qtY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-378" y="-13"/>
         </scene>
-        <!--Airport Info-->
+        <!--View Controller-->
         <scene sceneID="3hS-pC-6TP">
             <objects>
                 <viewController id="Eaw-qr-ncH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mSn-fT-G88">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fZ-Vi-OQ1">
-                                <rect key="frame" x="122" y="748" width="170" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="https://airport.by/en"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="czS-un-cAz" firstAttribute="bottom" secondItem="3fZ-Vi-OQ1" secondAttribute="bottom" constant="30" id="BkH-XM-zeO"/>
-                            <constraint firstItem="3fZ-Vi-OQ1" firstAttribute="centerX" secondItem="mSn-fT-G88" secondAttribute="centerX" id="C42-p2-SfW"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="czS-un-cAz"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Airport Info" id="d4r-jq-a97"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="UtR-v3-bca"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeK-mT-jsx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541" y="1061"/>
+            <point key="canvasLocation" x="-378" y="768"/>
         </scene>
         <!--Arrivals-->
         <scene sceneID="ruD-L4-NZ8">
@@ -140,47 +95,18 @@
             </objects>
             <point key="canvasLocation" x="540.57971014492762" y="-338.16964285714283"/>
         </scene>
-        <!--Depatrues-->
-        <scene sceneID="xp1-k1-owV">
+        <!--Depatures-->
+        <scene sceneID="jRq-Yp-PP8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ziz-Bm-DRo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Depatrues" image="arrow.turn.right.up" catalog="system" selectedImage="arrow.turn.right.up" id="14l-qI-dfP"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="GdL-aw-sca">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="VXb-Vf-JJl" kind="relationship" relationship="rootViewController" id="Y0l-Pz-nrK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fzp-N8-rvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Depatures" id="h97-yQ-YLh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fLu-sI-XtP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Oy-XX-l5R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541" y="356"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Bx5-Ia-ywc">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IkL-zs-2x2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="UtR-v3-bca"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="F2l-0C-Jds">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Eaw-qr-ncH" kind="relationship" relationship="rootViewController" id="cbB-bt-lGs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FnN-dC-GIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-370" y="1061"/>
+            <point key="canvasLocation" x="784" y="514"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.turn.left.down" catalog="system" width="60" height="64"/>
-        <image name="arrow.turn.right.up" catalog="system" width="60" height="64"/>
     </resources>
 </document>

@@ -24,11 +24,11 @@ class ArrivalsViewController: UIViewController {
 	   super.viewDidLoad()
 		arrivalsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "arrivalCell")
 
-		let network = NetworkManager()
-	   network.getFlightInfo(infoUrl: "https://airport.by/en/timetable/online-arrival") { flightInfo [weak self] in
-		  self?.flightInfo = flightInfo
-		  self?.tableView.reloadData()
-	   }
+//		let network = NetworkManager()
+//	   network.getFlightInfo(infoUrl: "https://airport.by/en/timetable/online-arrival") { flightInfo [weak self] in
+//		  self?.flightInfo = flightInfo
+//		  self?.tableView.reloadData()
+//	   }
 	}
 	
 	
@@ -37,12 +37,12 @@ class ArrivalsViewController: UIViewController {
 
 extension ArrivalsViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return flights.count
+		return 3 // flights.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = arrivalsTableView.dequeueReusableCell(withIdentifier: "arrivalCell", for: indexPath)
-		cell.textLabel?.text = flightInfo[indexPath.row]
+		cell.textLabel?.text = "Arrivals" // flightInfo[indexPath.row]
 		return cell
 	}
 }
