@@ -13,7 +13,7 @@ class ArrivalsViewController: UIViewController {
 	
 	@IBOutlet weak var arrivalsTableView: UITableView!
 	
-	var flights = [String]()
+	var arrivalFlights =  [Int : [String]]()
 	
 	//	"https://airport.by/en/timetable/online-arrival"
 	//	"https://airport.by/en/timetable/online-departure"
@@ -24,11 +24,24 @@ class ArrivalsViewController: UIViewController {
 	   super.viewDidLoad()
 		arrivalsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "arrivalCell")
 
-//		let network = NetworkManager()
-//	   network.getFlightInfo(infoUrl: "https://airport.by/en/timetable/online-arrival") { flightInfo [weak self] in
-//		  self?.flightInfo = flightInfo
-//		  self?.tableView.reloadData()
-//	   }
+		
+		if #available(iOS 13.0, *) {
+			let navBarAppearance = UINavigationBarAppearance()
+			navBarAppearance.configureWithOpaqueBackground()
+			navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+			navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+			navBarAppearance.backgroundColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 1.0)
+			navigationController?.navigationBar.standardAppearance = navBarAppearance
+			navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+		}
+		
+		
+		
+		let network = NetworkManager()
+		network.getArrivalInfo(infoUrl: "https://airport.by/en/timetable/online-arrival") { [weak self] flightInfo in
+			self?.arrivalFlights = flightInfo
+			self?.arrivalsTableView.reloadData()
+	   }
 	}
 	
 	
@@ -37,12 +50,14 @@ class ArrivalsViewController: UIViewController {
 
 extension ArrivalsViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 3 // flights.count
+		return arrivalFlights.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = arrivalsTableView.dequeueReusableCell(withIdentifier: "arrivalCell", for: indexPath)
-		cell.textLabel?.text = "Arrivals" // flightInfo[indexPath.row]
+		
+		cell.textLabel?.text = arrivalFlights[indexPath.row]?[0]
+		
 		return cell
 	}
 }

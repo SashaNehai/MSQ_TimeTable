@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nex-go-Bsa">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="VXb-Vf-JJl" id="VfH-5L-MHS"/>
@@ -41,12 +41,14 @@
             </objects>
             <point key="canvasLocation" x="1451" y="305"/>
         </scene>
-        <!--Depatrues-->
+        <!--Depatures-->
         <scene sceneID="xp1-k1-owV">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzp-N8-rvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ziz-Bm-DRo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Depatrues" image="arrow.turn.right.up" catalog="system" selectedImage="arrow.turn.right.up" id="14l-qI-dfP"/>
+                    <tabBarItem key="tabBarItem" title="Depatures" image="arrow.turn.right.up" catalog="system" id="Vhf-ML-UfA"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="GdL-aw-sca">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -59,7 +61,6 @@
                         <segue destination="VXb-Vf-JJl" kind="relationship" relationship="rootViewController" id="Y0l-Pz-nrK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fzp-N8-rvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="541" y="305"/>
         </scene>
