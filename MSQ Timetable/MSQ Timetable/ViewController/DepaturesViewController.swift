@@ -9,15 +9,25 @@
 import UIKit
 
 class DepaturesViewController: UIViewController {
-
+	
 	@IBOutlet weak var depaturesTableView: UITableView!
 	
 	var depatureFlights =  [Int : [String]]()
 	
 	override func viewDidLoad() {
-        super.viewDidLoad()
-		depaturesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "depatureCell")
+		super.viewDidLoad()
 		
+		depaturesTableSettings()
+		navigationBarUpdate()
+		
+		let network = NetworkManager()
+		network.getFlightInfo(infoUrl: "https://airport.by/en/timetable/online-departure") { [weak self] flightInfo in
+			self?.depatureFlights = flightInfo
+			self?.depaturesTableView.reloadData()
+		}
+	}
+	
+	func navigationBarUpdate() {
 		if #available(iOS 13.0, *) {
 			let navBarAppearance = UINavigationBarAppearance()
 			navBarAppearance.configureWithOpaqueBackground()
@@ -27,13 +37,13 @@ class DepaturesViewController: UIViewController {
 			navigationController?.navigationBar.standardAppearance = navBarAppearance
 			navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
 		}
-		
-		let network = NetworkManager()
-		 network.getArrivalInfo(infoUrl: "https://airport.by/en/timetable/online-departure") { [weak self] flightInfo in
-			 self?.depatureFlights = flightInfo
-			 self?.depaturesTableView.reloadData()
-		}
 	}
+	
+	func depaturesTableSettings() {
+		let nibName = UINib(nibName: "DepatureViewCell", bundle: nil)
+		depaturesTableView.register(nibName, forCellReuseIdentifier: "depatureCell")
+	}
+	
 }
 
 extension DepaturesViewController: UITableViewDataSource {
@@ -43,8 +53,17 @@ extension DepaturesViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = depaturesTableView.dequeueReusableCell(withIdentifier: "depatureCell", for: indexPath)
-		cell.textLabel?.text = depatureFlights[indexPath.row]?[0]
+		let cell: DepatureViewCell = depaturesTableView.dequeueReusableCell(withIdentifier: "depatureCell", for: indexPath) as! DepatureViewCell
+		cell.cellUpdate(destination: depatureFlights[indexPath.row]![3],
+						flightId: depatureFlights[indexPath.row]![2],
+						airline: depatureFlights[indexPath.row]![0],
+						time: depatureFlights[indexPath.row]![1],
+						gate: depatureFlights[indexPath.row]![5],
+						status: depatureFlights[indexPath.row]![6])
 		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 100
 	}
 }

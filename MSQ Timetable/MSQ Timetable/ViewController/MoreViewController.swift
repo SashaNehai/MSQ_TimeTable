@@ -20,7 +20,6 @@ class MoreViewController: UIViewController {
 	}
 
 	func showSafariVC(url: String) {
-		
 		guard let url = URL(string: url) else { return }
 		
 		let safariVC = SFSafariViewController(url: url)
