@@ -20,6 +20,9 @@
 		FB4FAF1823B76CCF00C424C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4FAF1723B76CCF00C424C3 /* Assets.xcassets */; };
 		FB4FAF1B23B76CCF00C424C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4FAF1923B76CCF00C424C3 /* LaunchScreen.storyboard */; };
 		FB4FAF2323B78FFF00C424C3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FAF2223B78FFF00C424C3 /* NetworkManager.swift */; };
+		FBE2B27323D01F3700391427 /* FlightDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE2B27223D01F3700391427 /* FlightDetails.storyboard */; };
+		FBE2B27523D01FB900391427 /* FlightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2B27423D01FB900391427 /* FlightDetailsViewController.swift */; };
+		FBE2B27723D0203400391427 /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2B27623D0203400391427 /* FlightModel.swift */; };
 		FBED4A9623C34A2D00A4D306 /* DepaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED4A9523C34A2D00A4D306 /* DepaturesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		FB4FAF1A23B76CCF00C424C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB4FAF1C23B76CCF00C424C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB4FAF2223B78FFF00C424C3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FBE2B27223D01F3700391427 /* FlightDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlightDetails.storyboard; sourceTree = "<group>"; };
+		FBE2B27423D01FB900391427 /* FlightDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewController.swift; sourceTree = "<group>"; };
+		FBE2B27623D0203400391427 /* FlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
 		FBED4A9523C34A2D00A4D306 /* DepaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepaturesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +66,7 @@
 				FB3F06CB23C49A3800C727A5 /* Arrivals.storyboard */,
 				FB3F06CE23C49A4D00C727A5 /* Depatures.storyboard */,
 				FB3F06D023C49A5F00C727A5 /* More.storyboard */,
+				FBE2B27223D01F3700391427 /* FlightDetails.storyboard */,
 				FB4FAF1923B76CCF00C424C3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -71,6 +78,7 @@
 				FB4FAF1223B76CCE00C424C3 /* ArrivalsViewController.swift */,
 				FBED4A9523C34A2D00A4D306 /* DepaturesViewController.swift */,
 				FB3F06D423C49B9100C727A5 /* MoreViewController.swift */,
+				FBE2B27423D01FB900391427 /* FlightDetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -106,6 +114,7 @@
 				FB4FAF0E23B76CCE00C424C3 /* AppDelegate.swift */,
 				FB4FAF1023B76CCE00C424C3 /* SceneDelegate.swift */,
 				FB4FAF2223B78FFF00C424C3 /* NetworkManager.swift */,
+				FBE2B27623D0203400391427 /* FlightModel.swift */,
 				FB4A8D7223CCB7EE0039DA35 /* CustomCell */,
 				FB3F06D323C49B6900C727A5 /* ViewController */,
 				FB3F06CA23C4999000C727A5 /* Storyboard */,
@@ -176,6 +185,7 @@
 				FB4FAF1B23B76CCF00C424C3 /* LaunchScreen.storyboard in Resources */,
 				FB3F06D223C49A5F00C727A5 /* More.storyboard in Resources */,
 				FB4FAF1823B76CCF00C424C3 /* Assets.xcassets in Resources */,
+				FBE2B27323D01F3700391427 /* FlightDetails.storyboard in Resources */,
 				FB3F06CD23C49A3800C727A5 /* Arrivals.storyboard in Resources */,
 				FB3F06CF23C49A4D00C727A5 /* Depatures.storyboard in Resources */,
 				FB4FAF1623B76CCE00C424C3 /* Main.storyboard in Resources */,
@@ -195,7 +205,9 @@
 				FBED4A9623C34A2D00A4D306 /* DepaturesViewController.swift in Sources */,
 				FB4A8D7D23CCEE8F0039DA35 /* FlightCell.swift in Sources */,
 				FB3F06D523C49B9100C727A5 /* MoreViewController.swift in Sources */,
+				FBE2B27523D01FB900391427 /* FlightDetailsViewController.swift in Sources */,
 				FB4FAF0F23B76CCE00C424C3 /* AppDelegate.swift in Sources */,
+				FBE2B27723D0203400391427 /* FlightModel.swift in Sources */,
 				FB4FAF1123B76CCE00C424C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

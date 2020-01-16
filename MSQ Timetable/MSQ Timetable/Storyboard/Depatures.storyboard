@@ -20,6 +20,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="VXb-Vf-JJl" id="VfH-5L-MHS"/>
+                                    <outlet property="delegate" destination="VXb-Vf-JJl" id="bYC-1t-vCH"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -44,7 +45,6 @@
         <!--Depatures-->
         <scene sceneID="xp1-k1-owV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fzp-N8-rvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ziz-Bm-DRo" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Depatures" image="arrow.turn.right.up" catalog="system" id="Vhf-ML-UfA"/>
                     <toolbarItems/>
@@ -52,6 +52,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="GdL-aw-sca">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -61,6 +62,7 @@
                         <segue destination="VXb-Vf-JJl" kind="relationship" relationship="rootViewController" id="Y0l-Pz-nrK"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzp-N8-rvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="541" y="305"/>
         </scene>

@@ -51,7 +51,7 @@ class DepaturesViewController: UIViewController {
 	
 }
 
-extension DepaturesViewController: UITableViewDataSource {
+extension DepaturesViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return depatureFlights.count
@@ -66,6 +66,19 @@ extension DepaturesViewController: UITableViewDataSource {
 						gate: depatureFlights[indexPath.row]![5],
 						status: depatureFlights[indexPath.row]![6])
 		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		let storyBoard : UIStoryboard = UIStoryboard(name: "FlightDetails", bundle:nil)
+		let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FlightDetailsViewController") as! FlightDetailsViewController
+		self.navigationController?.pushViewController(nextViewController, animated: true)
+		
+		nextViewController.flight.flightId = depatureFlights[indexPath.row]![2]
+		nextViewController.flight.airline = depatureFlights[indexPath.row]![0]
+		nextViewController.flight.time = depatureFlights[indexPath.row]![1]
+		nextViewController.flight.status = depatureFlights[indexPath.row]![6]
+		nextViewController.flight.destination = depatureFlights[indexPath.row]![3]
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

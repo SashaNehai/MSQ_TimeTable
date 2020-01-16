@@ -69,6 +69,19 @@ extension ArrivalsViewController: UITableViewDataSource {
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		let storyBoard : UIStoryboard = UIStoryboard(name: "FlightDetails", bundle:nil)
+		let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FlightDetailsViewController") as! FlightDetailsViewController
+		self.navigationController?.pushViewController(nextViewController, animated: true)
+		
+		nextViewController.flight.flightId = arrivalFlights[indexPath.row]![3]
+		nextViewController.flight.airline = arrivalFlights[indexPath.row]![0]
+		nextViewController.flight.time = arrivalFlights[indexPath.row]![2]
+		nextViewController.flight.status = arrivalFlights[indexPath.row]![6]
+		nextViewController.flight.destination = arrivalFlights[indexPath.row]![4]
+	}
+	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 100
 	}
