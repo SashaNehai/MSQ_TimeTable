@@ -11,10 +11,8 @@
 		FB3F06CF23C49A4D00C727A5 /* Depatures.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB3F06CE23C49A4D00C727A5 /* Depatures.storyboard */; };
 		FB3F06D223C49A5F00C727A5 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB3F06D023C49A5F00C727A5 /* More.storyboard */; };
 		FB3F06D523C49B9100C727A5 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F06D423C49B9100C727A5 /* MoreViewController.swift */; };
-		FB4A8D7923CCCFA80039DA35 /* ArrivalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A8D7723CCCFA80039DA35 /* ArrivalViewCell.swift */; };
-		FB4A8D7A23CCCFA80039DA35 /* ArrivalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4A8D7823CCCFA80039DA35 /* ArrivalViewCell.xib */; };
-		FB4A8D7D23CCEE8F0039DA35 /* DepatureViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A8D7B23CCEE8F0039DA35 /* DepatureViewCell.swift */; };
-		FB4A8D7E23CCEE8F0039DA35 /* DepatureViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4A8D7C23CCEE8F0039DA35 /* DepatureViewCell.xib */; };
+		FB4A8D7D23CCEE8F0039DA35 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A8D7B23CCEE8F0039DA35 /* FlightCell.swift */; };
+		FB4A8D7E23CCEE8F0039DA35 /* FlightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4A8D7C23CCEE8F0039DA35 /* FlightCell.xib */; };
 		FB4FAF0F23B76CCE00C424C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FAF0E23B76CCE00C424C3 /* AppDelegate.swift */; };
 		FB4FAF1123B76CCE00C424C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FAF1023B76CCE00C424C3 /* SceneDelegate.swift */; };
 		FB4FAF1323B76CCE00C424C3 /* ArrivalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FAF1223B76CCE00C424C3 /* ArrivalsViewController.swift */; };
@@ -30,10 +28,8 @@
 		FB3F06CE23C49A4D00C727A5 /* Depatures.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Depatures.storyboard; sourceTree = "<group>"; };
 		FB3F06D123C49A5F00C727A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "MSQ Timetable/Base.lproj/More.storyboard"; sourceTree = "<group>"; };
 		FB3F06D423C49B9100C727A5 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		FB4A8D7723CCCFA80039DA35 /* ArrivalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalViewCell.swift; sourceTree = "<group>"; };
-		FB4A8D7823CCCFA80039DA35 /* ArrivalViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArrivalViewCell.xib; sourceTree = "<group>"; };
-		FB4A8D7B23CCEE8F0039DA35 /* DepatureViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepatureViewCell.swift; sourceTree = "<group>"; };
-		FB4A8D7C23CCEE8F0039DA35 /* DepatureViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepatureViewCell.xib; sourceTree = "<group>"; };
+		FB4A8D7B23CCEE8F0039DA35 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
+		FB4A8D7C23CCEE8F0039DA35 /* FlightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightCell.xib; sourceTree = "<group>"; };
 		FB4FAF0B23B76CCE00C424C3 /* MSQ Timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSQ Timetable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4FAF0E23B76CCE00C424C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB4FAF1023B76CCE00C424C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,10 +78,8 @@
 		FB4A8D7223CCB7EE0039DA35 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				FB4A8D7723CCCFA80039DA35 /* ArrivalViewCell.swift */,
-				FB4A8D7823CCCFA80039DA35 /* ArrivalViewCell.xib */,
-				FB4A8D7B23CCEE8F0039DA35 /* DepatureViewCell.swift */,
-				FB4A8D7C23CCEE8F0039DA35 /* DepatureViewCell.xib */,
+				FB4A8D7B23CCEE8F0039DA35 /* FlightCell.swift */,
+				FB4A8D7C23CCEE8F0039DA35 /* FlightCell.xib */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -180,13 +174,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB4FAF1B23B76CCF00C424C3 /* LaunchScreen.storyboard in Resources */,
-				FB4A8D7A23CCCFA80039DA35 /* ArrivalViewCell.xib in Resources */,
 				FB3F06D223C49A5F00C727A5 /* More.storyboard in Resources */,
 				FB4FAF1823B76CCF00C424C3 /* Assets.xcassets in Resources */,
 				FB3F06CD23C49A3800C727A5 /* Arrivals.storyboard in Resources */,
 				FB3F06CF23C49A4D00C727A5 /* Depatures.storyboard in Resources */,
 				FB4FAF1623B76CCE00C424C3 /* Main.storyboard in Resources */,
-				FB4A8D7E23CCEE8F0039DA35 /* DepatureViewCell.xib in Resources */,
+				FB4A8D7E23CCEE8F0039DA35 /* FlightCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +193,8 @@
 				FB4FAF2323B78FFF00C424C3 /* NetworkManager.swift in Sources */,
 				FB4FAF1323B76CCE00C424C3 /* ArrivalsViewController.swift in Sources */,
 				FBED4A9623C34A2D00A4D306 /* DepaturesViewController.swift in Sources */,
-				FB4A8D7D23CCEE8F0039DA35 /* DepatureViewCell.swift in Sources */,
+				FB4A8D7D23CCEE8F0039DA35 /* FlightCell.swift in Sources */,
 				FB3F06D523C49B9100C727A5 /* MoreViewController.swift in Sources */,
-				FB4A8D7923CCCFA80039DA35 /* ArrivalViewCell.swift in Sources */,
 				FB4FAF0F23B76CCE00C424C3 /* AppDelegate.swift in Sources */,
 				FB4FAF1123B76CCE00C424C3 /* SceneDelegate.swift in Sources */,
 			);

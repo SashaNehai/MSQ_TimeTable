@@ -20,6 +20,10 @@ class ArrivalsViewController: UIViewController, UITableViewDelegate {
 		
 		arrivalsTableSettings()
 		navigationBarUpdate()
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(true)
 		
 		let network = NetworkManager()
 		network.getFlightInfo(infoUrl: "https://airport.by/en/timetable/online-arrival") { [weak self] flightInfo in
@@ -29,8 +33,8 @@ class ArrivalsViewController: UIViewController, UITableViewDelegate {
 	}
 	
 	func arrivalsTableSettings() {
-		let nibName = UINib(nibName: "ArrivalViewCell", bundle: nil)
-		arrivalsTableView.register(nibName, forCellReuseIdentifier: "arrivalCell")
+		let nibName = UINib(nibName: "FlightCell", bundle: nil)
+		arrivalsTableView.register(nibName, forCellReuseIdentifier: "flightCell")
 	}
 	
 	func navigationBarUpdate() {
@@ -53,12 +57,13 @@ extension ArrivalsViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell: ArrivalViewCell = arrivalsTableView.dequeueReusableCell(withIdentifier: "arrivalCell", for: indexPath) as! ArrivalViewCell
+		let cell: FlightCell = arrivalsTableView.dequeueReusableCell(withIdentifier: "flightCell", for: indexPath) as! FlightCell
 		
 		cell.cellUpdate(destination: arrivalFlights[indexPath.row]![4],
 						flightId: arrivalFlights[indexPath.row]![3],
 						airline: arrivalFlights[indexPath.row]![0],
 						time: arrivalFlights[indexPath.row]![2],
+						gate: "",
 						status: arrivalFlights[indexPath.row]![6])
 		
 		return cell

@@ -16,9 +16,13 @@ class DepaturesViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+
 		depaturesTableSettings()
 		navigationBarUpdate()
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(true)
 		
 		let network = NetworkManager()
 		network.getFlightInfo(infoUrl: "https://airport.by/en/timetable/online-departure") { [weak self] flightInfo in
@@ -26,6 +30,7 @@ class DepaturesViewController: UIViewController {
 			self?.depaturesTableView.reloadData()
 		}
 	}
+	
 	
 	func navigationBarUpdate() {
 		if #available(iOS 13.0, *) {
@@ -40,8 +45,8 @@ class DepaturesViewController: UIViewController {
 	}
 	
 	func depaturesTableSettings() {
-		let nibName = UINib(nibName: "DepatureViewCell", bundle: nil)
-		depaturesTableView.register(nibName, forCellReuseIdentifier: "depatureCell")
+		let nibName = UINib(nibName: "FlightCell", bundle: nil)
+		depaturesTableView.register(nibName, forCellReuseIdentifier: "flightCell")
 	}
 	
 }
@@ -53,7 +58,7 @@ extension DepaturesViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell: DepatureViewCell = depaturesTableView.dequeueReusableCell(withIdentifier: "depatureCell", for: indexPath) as! DepatureViewCell
+		let cell: FlightCell = depaturesTableView.dequeueReusableCell(withIdentifier: "flightCell", for: indexPath) as! FlightCell
 		cell.cellUpdate(destination: depatureFlights[indexPath.row]![3],
 						flightId: depatureFlights[indexPath.row]![2],
 						airline: depatureFlights[indexPath.row]![0],
