@@ -8,10 +8,12 @@
 
 import Foundation
 
+typealias FlightData = [Int : [String]]
+
 class NetworkManager {
 	
-	func getFlightInfo(infoUrl: String, callBack: (([Int : [String]]) -> Void)?) {
-		var flightInfo = [Int : [String]]()
+	func getFlightInfo(infoUrl: String, callBack: ((FlightData) -> Void)?) {
+		var flightInfo = FlightData()
 		let url = URL(string: infoUrl)!
 		let request = URLRequest(url: url)
 		
@@ -81,25 +83,28 @@ class NetworkManager {
 									} else if element.contains("CANCELLED") {
 										infoUpdated.remove(at: index)
 										infoUpdated.append("CANCELLED")
+									} else if element.contains("LEAVING") {
+										infoUpdated.remove(at: index)
+										infoUpdated.append("LEAVING")
 									}
-									
-								} else if element.contains("</td>"){
-									infoUpdated.remove(at: index)
-									infoUpdated.append("")
+										
+									} else if element.contains("</td>"){
+										infoUpdated.remove(at: index)
+										infoUpdated.append("")
+									}
 								}
+								flightInfo[flightKey] = infoUpdated
+								flightKey += 1
 							}
-							flightInfo[flightKey] = infoUpdated
-							flightKey += 1
+							print("flights: \(flightInfo.sorted{ $0.key < $1.key })")
 						}
-						print("flights: \(flightInfo.sorted{ $0.key < $1.key })")
 					}
 				}
+				DispatchQueue.main.sync(execute: {
+					callBack?(flightInfo)
+				})
 			}
-			DispatchQueue.main.sync(execute: {
-				callBack?(flightInfo)
-			})
+			task.resume()
+			return
 		}
-		task.resume()
-		return 
-	}
 }

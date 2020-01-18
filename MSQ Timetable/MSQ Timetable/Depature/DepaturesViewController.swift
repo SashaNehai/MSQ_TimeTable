@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DepaturesViewController: UIViewController {
+class DepaturesViewController: BaseFlightViewController {
 	
 	@IBOutlet weak var depaturesTableView: UITableView!
 	
@@ -17,8 +17,7 @@ class DepaturesViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		depaturesTableSettings()
-		navigationBarUpdate()
+		setTableSettings(table: depaturesTableView)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -31,27 +30,9 @@ class DepaturesViewController: UIViewController {
 		}
 	}
 	
-	
-	func navigationBarUpdate() {
-		if #available(iOS 13.0, *) {
-			let navBarAppearance = UINavigationBarAppearance()
-			navBarAppearance.configureWithOpaqueBackground()
-			navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-			navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-			navBarAppearance.backgroundColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 1.0)
-			navigationController?.navigationBar.standardAppearance = navBarAppearance
-			navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-		}
-	}
-	
-	func depaturesTableSettings() {
-		let nibName = UINib(nibName: "FlightCell", bundle: nil)
-		depaturesTableView.register(nibName, forCellReuseIdentifier: "flightCell")
-	}
-	
 }
 
-extension DepaturesViewController: UITableViewDataSource, UITableViewDelegate {
+extension DepaturesViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return depatureFlights.count
@@ -77,11 +58,7 @@ extension DepaturesViewController: UITableViewDataSource, UITableViewDelegate {
 		nextViewController.flight.flightId = depatureFlights[indexPath.row]![2]
 		nextViewController.flight.airline = depatureFlights[indexPath.row]![0]
 		nextViewController.flight.time = depatureFlights[indexPath.row]![1]
-		nextViewController.flight.status = depatureFlights[indexPath.row]![6]
+		nextViewController.flight.status = FlightStatus(rawValue: depatureFlights[indexPath.row]![6])
 		nextViewController.flight.destination = depatureFlights[indexPath.row]![3]
-	}
-	
-	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 100
 	}
 }

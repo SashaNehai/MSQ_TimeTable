@@ -8,44 +8,26 @@
 
 import UIKit
 
-
-class ArrivalsViewController: UIViewController, UITableViewDelegate {
+class ArrivalsViewController: BaseFlightViewController {
 	
 	@IBOutlet weak var arrivalsTableView: UITableView!
 	
-	var arrivalFlights =  [Int : [String]]()
+	var arrivalFlights = FlightData()
+	let downloader = DataDownloader()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		arrivalsTableSettings()
-		navigationBarUpdate()
+		setTableSettings(table: arrivalsTableView)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
-		
-		let network = NetworkManager()
-		network.getFlightInfo(infoUrl: "https://airport.by/en/timetable/online-arrival") { [weak self] flightInfo in
-			self?.arrivalFlights = flightInfo
+
+		downloader.retrieveNetworkData(url: "https://airport.by/en/timetable/online-arrival") {
+			[weak self] flightData in
+			self?.arrivalFlights = flightData
 			self?.arrivalsTableView.reloadData()
-		}
-	}
-	
-	func arrivalsTableSettings() {
-		let nibName = UINib(nibName: "FlightCell", bundle: nil)
-		arrivalsTableView.register(nibName, forCellReuseIdentifier: "flightCell")
-	}
-	
-	func navigationBarUpdate() {
-		if #available(iOS 13.0, *) {
-			let navBarAppearance = UINavigationBarAppearance()
-			navBarAppearance.configureWithOpaqueBackground()
-			navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-			navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-			navBarAppearance.backgroundColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 1.0)
-			navigationController?.navigationBar.standardAppearance = navBarAppearance
-			navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
 		}
 	}
 	
@@ -78,12 +60,8 @@ extension ArrivalsViewController: UITableViewDataSource {
 		nextViewController.flight.flightId = arrivalFlights[indexPath.row]![3]
 		nextViewController.flight.airline = arrivalFlights[indexPath.row]![0]
 		nextViewController.flight.time = arrivalFlights[indexPath.row]![2]
-		nextViewController.flight.status = arrivalFlights[indexPath.row]![6]
+		nextViewController.flight.status = FlightStatus(rawValue: arrivalFlights[indexPath.row]![6])
 		nextViewController.flight.destination = arrivalFlights[indexPath.row]![4]
-	}
-	
-	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 100
 	}
 	
 }
