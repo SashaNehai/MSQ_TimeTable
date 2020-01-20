@@ -13,7 +13,7 @@ class ArrivalsViewController: BaseFlightViewController {
 	@IBOutlet weak var arrivalsTableView: UITableView!
 	
 	var arrivalFlights = FlightData()
-	let downloader = DataDownloader()
+	let downloader = DataSaver()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

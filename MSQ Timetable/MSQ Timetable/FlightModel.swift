@@ -46,7 +46,7 @@ extension FlightStatus {
 	}
 }
 
-struct Flight {
+struct Flight2 {
 	var airline: String?
 	var destination: String?
 	var flightId: String?

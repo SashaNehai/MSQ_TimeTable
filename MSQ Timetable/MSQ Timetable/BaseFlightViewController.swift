@@ -32,12 +32,24 @@ class BaseFlightViewController: UIViewController {
 		let nibName = UINib(nibName: "FlightCell", bundle: nil)
 		table.register(nibName, forCellReuseIdentifier: "flightCell")
 	}
-	
-	
+
 }
 
 extension BaseFlightViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 100
 	}
+	
+	// Here: Implement get data to update tableViews:
+	//	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	//		return flights.count
+	//	}
+	//
+	//	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+	//		let flight = flights[indexPath.row]
+	//		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+	//		cell.textLabel?.text = flight.value(forKey: "airline") as! String
+	//		print("cell ready")
+	//		return cell
+	//	}
 }
