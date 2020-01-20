@@ -10,14 +10,18 @@ import UIKit
 
 class FlightDetailsViewController: UIViewController {
 	
-	var flight = Flight()
+	var flight = Flight2()
 	
 	@IBOutlet weak var navigationView: UINavigationItem!
 	@IBOutlet weak var airlineLabel: UILabel!
 	@IBOutlet weak var destinationLabel: UILabel!
 	@IBOutlet weak var statusLabel: UILabel!
+	@IBOutlet weak var gateLabel: UILabel!
+	@IBOutlet weak var timeLabel: UILabel!
 	@IBOutlet weak var favoriteButton: UIBarButtonItem!
 	@IBOutlet weak var airlineLogo: UIImageView!
+	
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -28,10 +32,16 @@ class FlightDetailsViewController: UIViewController {
 		statusLabel.text = flight.status.map { $0.rawValue }
 		destinationLabel.text = flight.destination
 		
+		gateLabel.text = flight.gate
+		timeLabel.text = flight.time
+		
+		
 		airlineLogo.image = setAirlineLogo(airline: flight.airline!)
 		let fs = FlightStatus(rawValue: flight.status!.rawValue)
 		statusLabel.textColor = fs?.color
-		setFavoriteButtonDesign()
+		//		favorite flight feature will be implement later
+		favoriteButton.isEnabled = false
+		//		setFavoriteButtonDesign()
 	}
 	
 	@IBAction func favoriteButtonPressed(_ sender: Any) {

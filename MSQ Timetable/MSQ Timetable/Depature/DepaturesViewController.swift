@@ -13,6 +13,7 @@ class DepaturesViewController: BaseFlightViewController {
 	@IBOutlet weak var depaturesTableView: UITableView!
 	
 	var depatureFlights =  [Int : [String]]()
+	let downloader = DataSaver()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -23,13 +24,12 @@ class DepaturesViewController: BaseFlightViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
 		
-		let network = NetworkManager()
-		network.getFlightInfo(infoUrl: "https://airport.by/en/timetable/online-departure") { [weak self] flightInfo in
-			self?.depatureFlights = flightInfo
+		downloader.retrieveNetworkData(url: "https://airport.by/en/timetable/online-departure") {
+			[weak self] flightData in
+			self?.depatureFlights = flightData
 			self?.depaturesTableView.reloadData()
 		}
 	}
-	
 }
 
 extension DepaturesViewController: UITableViewDataSource {
@@ -60,5 +60,6 @@ extension DepaturesViewController: UITableViewDataSource {
 		nextViewController.flight.time = depatureFlights[indexPath.row]![1]
 		nextViewController.flight.status = FlightStatus(rawValue: depatureFlights[indexPath.row]![6])
 		nextViewController.flight.destination = depatureFlights[indexPath.row]![3]
+		nextViewController.flight.gate = depatureFlights[indexPath.row]![5]
 	}
 }
