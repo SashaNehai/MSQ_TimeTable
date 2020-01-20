@@ -14,7 +14,8 @@ class ArrivalsViewController: BaseFlightViewController {
 	
 	var arrivalFlights = FlightData()
 	let downloader = DataSaver()
-	
+	private let refreshControl = UIRefreshControl()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -24,6 +25,21 @@ class ArrivalsViewController: BaseFlightViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
 
+		setRefreshControlDesign()
+		dataDownload()
+	}
+	
+	func setRefreshControlDesign() {
+		if #available(iOS 10.0, *) {
+			arrivalsTableView.refreshControl = refreshControl
+		} else {
+			arrivalsTableView.addSubview(refreshControl)
+		}
+		refreshControl.addTarget(self, action: #selector(refreshFlightData(_:)), for: .valueChanged)
+		refreshControl.tintColor = .white
+	}
+	
+	func dataDownload() {
 		downloader.retrieveNetworkData(url: "https://airport.by/en/timetable/online-arrival") {
 			[weak self] flightData in
 			self?.arrivalFlights = flightData
@@ -31,6 +47,11 @@ class ArrivalsViewController: BaseFlightViewController {
 		}
 	}
 	
+	@objc private func refreshFlightData(_ sender: Any) {
+		dataDownload()
+		refreshControl.endRefreshing()
+	}
+
 }
 
 extension ArrivalsViewController: UITableViewDataSource {
