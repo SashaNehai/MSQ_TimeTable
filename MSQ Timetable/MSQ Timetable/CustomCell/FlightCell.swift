@@ -32,4 +32,5 @@ class FlightCell: UITableViewCell {
 		let fs = FlightStatus(rawValue: status)
 		statusLabel.textColor = fs?.color
 	}
+	
 }

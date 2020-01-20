@@ -14,7 +14,8 @@ class DepaturesViewController: BaseFlightViewController {
 	
 	var depatureFlights =  [Int : [String]]()
 	let downloader = DataSaver()
-	
+	private let refreshControl = UIRefreshControl()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -24,12 +25,33 @@ class DepaturesViewController: BaseFlightViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
 		
+		setRefreshControlDesign()
+		dataDownload()
+	}
+	
+	func setRefreshControlDesign() {
+		if #available(iOS 10.0, *) {
+			depaturesTableView.refreshControl = refreshControl
+		} else {
+			depaturesTableView.addSubview(refreshControl)
+		}
+		refreshControl.addTarget(self, action: #selector(refreshFlightData(_:)), for: .valueChanged)
+		refreshControl.tintColor = .white
+	}
+	
+	func dataDownload() {
 		downloader.retrieveNetworkData(url: "https://airport.by/en/timetable/online-departure") {
 			[weak self] flightData in
 			self?.depatureFlights = flightData
 			self?.depaturesTableView.reloadData()
 		}
 	}
+	
+	@objc private func refreshFlightData(_ sender: Any) {
+		dataDownload()
+		refreshControl.endRefreshing()
+	}
+	
 }
 
 extension DepaturesViewController: UITableViewDataSource {
