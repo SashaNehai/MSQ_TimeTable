@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="129" id="KGk-i7-Jjw" customClass="FlightCell" customModule="MSQ_Timetable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="423" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4r-3l-gLl">
+                        <rect key="frame" x="10" y="10" width="89" height="19.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="textColor" red="0.99907737969999999" green="0.22950214150000001" blue="0.18888315559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlightID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eF1-t4-3ld">
+                        <rect key="frame" x="10" y="34.5" width="50" height="38.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Airline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEs-XT-gyI">
+                        <rect key="frame" x="10" y="78" width="40.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbI-DI-ID6">
+                        <rect key="frame" x="361" y="73.5" width="52" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGE-0B-jjW">
+                        <rect key="frame" x="377" y="15" width="36" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="S4r-3l-gLl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="1sI-to-IQw"/>
+                    <constraint firstAttribute="trailing" secondItem="sbI-DI-ID6" secondAttribute="trailing" constant="10" id="Dro-v9-1eS"/>
+                    <constraint firstItem="sbI-DI-ID6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mGE-0B-jjW" secondAttribute="bottom" constant="15" id="Iey-KQ-2NL"/>
+                    <constraint firstItem="GEs-XT-gyI" firstAttribute="top" secondItem="eF1-t4-3ld" secondAttribute="bottom" constant="5" id="O13-bK-GlU"/>
+                    <constraint firstAttribute="bottom" secondItem="GEs-XT-gyI" secondAttribute="bottom" constant="10" id="TAf-Yp-m2H"/>
+                    <constraint firstAttribute="bottom" secondItem="sbI-DI-ID6" secondAttribute="bottom" constant="10" id="U4X-g1-AaJ"/>
+                    <constraint firstItem="eF1-t4-3ld" firstAttribute="top" secondItem="S4r-3l-gLl" secondAttribute="bottom" constant="5" id="aWT-Yl-DjN"/>
+                    <constraint firstItem="GEs-XT-gyI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="buW-kO-3Wu"/>
+                    <constraint firstAttribute="trailing" secondItem="mGE-0B-jjW" secondAttribute="trailing" constant="10" id="e01-Q3-5FN"/>
+                    <constraint firstItem="S4r-3l-gLl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="oAp-aP-7Br"/>
+                    <constraint firstItem="mGE-0B-jjW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="puP-cA-vuf"/>
+                    <constraint firstItem="eF1-t4-3ld" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="swm-Ed-Igj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="airlineLabel" destination="GEs-XT-gyI" id="ZNR-Tc-YUW"/>
+                <outlet property="destinationLabel" destination="S4r-3l-gLl" id="Wdn-CM-5wP"/>
+                <outlet property="flightIdLabel" destination="eF1-t4-3ld" id="JMy-MS-7NX"/>
+                <outlet property="statusLabel" destination="sbI-DI-ID6" id="GCf-oq-sg8"/>
+                <outlet property="timeLabel" destination="mGE-0B-jjW" id="MBU-y9-Jnf"/>
+            </connections>
+            <point key="canvasLocation" x="-292.02898550724638" y="-64.620535714285708"/>
+        </tableViewCell>
+    </objects>
+</document>

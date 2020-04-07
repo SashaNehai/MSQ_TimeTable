@@ -3,55 +3,60 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB3F06CD23C49A3800C727A5 /* Arrivals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB3F06CB23C49A3800C727A5 /* Arrivals.storyboard */; };
-		FB3F06CF23C49A4D00C727A5 /* Depatures.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB3F06CE23C49A4D00C727A5 /* Depatures.storyboard */; };
-		FB3F06D223C49A5F00C727A5 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB3F06D023C49A5F00C727A5 /* More.storyboard */; };
-		FB3F06D523C49B9100C727A5 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F06D423C49B9100C727A5 /* MoreViewController.swift */; };
+		2492A50E354DDDC6420772D3 /* Pods_MSQ_Timetable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B731FA946AF47DB72661BA0 /* Pods_MSQ_Timetable.framework */; };
 		FB4A8D7D23CCEE8F0039DA35 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A8D7B23CCEE8F0039DA35 /* FlightCell.swift */; };
 		FB4A8D7E23CCEE8F0039DA35 /* FlightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4A8D7C23CCEE8F0039DA35 /* FlightCell.xib */; };
 		FB4FAF0F23B76CCE00C424C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FAF0E23B76CCE00C424C3 /* AppDelegate.swift */; };
 		FB4FAF1123B76CCE00C424C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FAF1023B76CCE00C424C3 /* SceneDelegate.swift */; };
-		FB4FAF1323B76CCE00C424C3 /* ArrivalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FAF1223B76CCE00C424C3 /* ArrivalsViewController.swift */; };
 		FB4FAF1623B76CCE00C424C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4FAF1423B76CCE00C424C3 /* Main.storyboard */; };
 		FB4FAF1823B76CCF00C424C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4FAF1723B76CCF00C424C3 /* Assets.xcassets */; };
 		FB4FAF1B23B76CCF00C424C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4FAF1923B76CCF00C424C3 /* LaunchScreen.storyboard */; };
-		FB4FAF2323B78FFF00C424C3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FAF2223B78FFF00C424C3 /* NetworkManager.swift */; };
-		FB6DA00A23D1A6D200B08D63 /* DataSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6DA00923D1A6D200B08D63 /* DataSaver.swift */; };
-		FB6DA00C23D1D72500B08D63 /* BaseFlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6DA00B23D1D72400B08D63 /* BaseFlightViewController.swift */; };
 		FB6DA03523D3223200B08D63 /* MSQTimetable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB6DA03323D3223200B08D63 /* MSQTimetable.xcdatamodeld */; };
+		FBA3E73524386D6300F698A4 /* AirportAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3E73424386D6300F698A4 /* AirportAPI.swift */; };
+		FBA3E73724386D6E00F698A4 /* AirportAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3E73624386D6E00F698A4 /* AirportAPIRouter.swift */; };
+		FBA3E73924386D7900F698A4 /* AirportAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3E73824386D7900F698A4 /* AirportAPIService.swift */; };
+		FBDE1A3024387DE3005F43D1 /* FlightDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDE1A2F24387DE3005F43D1 /* FlightDetail.swift */; };
+		FBDE1A3224388444005F43D1 /* FlightType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDE1A3124388444005F43D1 /* FlightType.swift */; };
 		FBE2B27323D01F3700391427 /* FlightDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE2B27223D01F3700391427 /* FlightDetails.storyboard */; };
 		FBE2B27523D01FB900391427 /* FlightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2B27423D01FB900391427 /* FlightDetailsViewController.swift */; };
-		FBE2B27723D0203400391427 /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2B27623D0203400391427 /* FlightModel.swift */; };
-		FBED4A9623C34A2D00A4D306 /* DepaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED4A9523C34A2D00A4D306 /* DepaturesViewController.swift */; };
+		FBE2B27723D0203400391427 /* FlightStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2B27623D0203400391427 /* FlightStatus.swift */; };
+		FBEBDBEB243B2AE500F0E8D6 /* FlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDBEA243B2AE500F0E8D6 /* FlightsViewModel.swift */; };
+		FBEBDBF2243C74CE00F0E8D6 /* DateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDBF1243C74CE00F0E8D6 /* DateInteractor.swift */; };
+		FBF4D27E243C7D8100EAE114 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF4D27D243C7D8100EAE114 /* FlightsViewController.swift */; };
+		FBF4D280243C84F200EAE114 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF4D27F243C84F200EAE114 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB3F06CC23C49A3800C727A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "MSQ Timetable/Base.lproj/Arrivals.storyboard"; sourceTree = "<group>"; };
-		FB3F06CE23C49A4D00C727A5 /* Depatures.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Depatures.storyboard; sourceTree = "<group>"; };
-		FB3F06D123C49A5F00C727A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "MSQ Timetable/Base.lproj/More.storyboard"; sourceTree = "<group>"; };
-		FB3F06D423C49B9100C727A5 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoreViewController.swift; path = ViewController/MoreViewController.swift; sourceTree = "<group>"; };
+		039B57B36BA54E15166BB442 /* Pods-MSQ Timetable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSQ Timetable.debug.xcconfig"; path = "Target Support Files/Pods-MSQ Timetable/Pods-MSQ Timetable.debug.xcconfig"; sourceTree = "<group>"; };
+		5B731FA946AF47DB72661BA0 /* Pods_MSQ_Timetable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSQ_Timetable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3FDC3E6B651AB3423CC8B81 /* Pods-MSQ Timetable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSQ Timetable.release.xcconfig"; path = "Target Support Files/Pods-MSQ Timetable/Pods-MSQ Timetable.release.xcconfig"; sourceTree = "<group>"; };
 		FB4A8D7B23CCEE8F0039DA35 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
 		FB4A8D7C23CCEE8F0039DA35 /* FlightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightCell.xib; sourceTree = "<group>"; };
 		FB4FAF0B23B76CCE00C424C3 /* MSQ Timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSQ Timetable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4FAF0E23B76CCE00C424C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB4FAF1023B76CCE00C424C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB4FAF1223B76CCE00C424C3 /* ArrivalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalsViewController.swift; sourceTree = "<group>"; };
 		FB4FAF1523B76CCE00C424C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB4FAF1723B76CCF00C424C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB4FAF1A23B76CCF00C424C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB4FAF1C23B76CCF00C424C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB4FAF2223B78FFF00C424C3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		FB6DA00923D1A6D200B08D63 /* DataSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSaver.swift; sourceTree = "<group>"; };
-		FB6DA00B23D1D72400B08D63 /* BaseFlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFlightViewController.swift; sourceTree = "<group>"; };
 		FB6DA03423D3223200B08D63 /* FlightsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlightsDataModel.xcdatamodel; sourceTree = "<group>"; };
+		FBA3E73424386D6300F698A4 /* AirportAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAPI.swift; sourceTree = "<group>"; };
+		FBA3E73624386D6E00F698A4 /* AirportAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAPIRouter.swift; sourceTree = "<group>"; };
+		FBA3E73824386D7900F698A4 /* AirportAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAPIService.swift; sourceTree = "<group>"; };
+		FBDE1A2C24387404005F43D1 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Pods/Alamofire/Source/Alamofire.swift; sourceTree = "<group>"; };
+		FBDE1A2F24387DE3005F43D1 /* FlightDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetail.swift; sourceTree = "<group>"; };
+		FBDE1A3124388444005F43D1 /* FlightType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightType.swift; sourceTree = "<group>"; };
 		FBE2B27223D01F3700391427 /* FlightDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlightDetails.storyboard; sourceTree = "<group>"; };
 		FBE2B27423D01FB900391427 /* FlightDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewController.swift; sourceTree = "<group>"; };
-		FBE2B27623D0203400391427 /* FlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
-		FBED4A9523C34A2D00A4D306 /* DepaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepaturesViewController.swift; sourceTree = "<group>"; };
+		FBE2B27623D0203400391427 /* FlightStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightStatus.swift; sourceTree = "<group>"; };
+		FBEBDBEA243B2AE500F0E8D6 /* FlightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewModel.swift; sourceTree = "<group>"; };
+		FBEBDBF1243C74CE00F0E8D6 /* DateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInteractor.swift; sourceTree = "<group>"; };
+		FBF4D27D243C7D8100EAE114 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
+		FBF4D27F243C84F200EAE114 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,35 +64,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2492A50E354DDDC6420772D3 /* Pods_MSQ_Timetable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DACF788145069BD399A6B936 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				039B57B36BA54E15166BB442 /* Pods-MSQ Timetable.debug.xcconfig */,
+				B3FDC3E6B651AB3423CC8B81 /* Pods-MSQ Timetable.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ECAA1BE1E4FF335657A4AC77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B731FA946AF47DB72661BA0 /* Pods_MSQ_Timetable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB3F06CA23C4999000C727A5 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				FBE2B27223D01F3700391427 /* FlightDetails.storyboard */,
 				FB4FAF1423B76CCE00C424C3 /* Main.storyboard */,
 				FB4FAF1923B76CCF00C424C3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		FB4A8D7223CCB7EE0039DA35 /* CustomCell */ = {
+		FB4A8D7223CCB7EE0039DA35 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				FB4A8D7B23CCEE8F0039DA35 /* FlightCell.swift */,
 				FB4A8D7C23CCEE8F0039DA35 /* FlightCell.xib */,
 			);
-			path = CustomCell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FB4FAF0223B76CCE00C424C3 = {
 			isa = PBXGroup;
 			children = (
+				FBDE1A2C24387404005F43D1 /* Alamofire.swift */,
 				FB4FAF0D23B76CCE00C424C3 /* MSQ Timetable */,
 				FB4FAF0C23B76CCE00C424C3 /* Products */,
+				DACF788145069BD399A6B936 /* Pods */,
+				ECAA1BE1E4FF335657A4AC77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,17 +131,14 @@
 			children = (
 				FB4FAF0E23B76CCE00C424C3 /* AppDelegate.swift */,
 				FB4FAF1023B76CCE00C424C3 /* SceneDelegate.swift */,
-				FB4FAF2223B78FFF00C424C3 /* NetworkManager.swift */,
-				FB6DA00923D1A6D200B08D63 /* DataSaver.swift */,
-				FBE2B27623D0203400391427 /* FlightModel.swift */,
-				FB6DA00B23D1D72400B08D63 /* BaseFlightViewController.swift */,
-				FB4A8D7223CCB7EE0039DA35 /* CustomCell */,
-				FB6DA00D23D1FC8700B08D63 /* Arrival */,
-				FB6DA00E23D1FCA200B08D63 /* Depature */,
-				FB6DA00F23D1FCC700B08D63 /* FlightDetail */,
+				FBF4D27F243C84F200EAE114 /* Constants.swift */,
+				FBA3E73324386D5300F698A4 /* API */,
+				FBDE1A2E24387DCF005F43D1 /* Model */,
+				FBEBDBEC243B662300F0E8D6 /* View Model */,
+				FBEBDBED243B663000F0E8D6 /* View Controller */,
+				FB4A8D7223CCB7EE0039DA35 /* Cell */,
 				FB3F06CA23C4999000C727A5 /* Storyboard */,
-				FB3F06D423C49B9100C727A5 /* MoreViewController.swift */,
-				FB3F06D023C49A5F00C727A5 /* More.storyboard */,
+				FBEBDBF0243C74B600F0E8D6 /* Helpers */,
 				FB4FAF1723B76CCF00C424C3 /* Assets.xcassets */,
 				FB4FAF1C23B76CCF00C424C3 /* Info.plist */,
 				FB6DA03323D3223200B08D63 /* MSQTimetable.xcdatamodeld */,
@@ -122,31 +146,49 @@
 			path = "MSQ Timetable";
 			sourceTree = "<group>";
 		};
-		FB6DA00D23D1FC8700B08D63 /* Arrival */ = {
+		FBA3E73324386D5300F698A4 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				FB4FAF1223B76CCE00C424C3 /* ArrivalsViewController.swift */,
-				FB3F06CB23C49A3800C727A5 /* Arrivals.storyboard */,
+				FBA3E73424386D6300F698A4 /* AirportAPI.swift */,
+				FBA3E73624386D6E00F698A4 /* AirportAPIRouter.swift */,
+				FBA3E73824386D7900F698A4 /* AirportAPIService.swift */,
 			);
-			path = Arrival;
+			path = API;
 			sourceTree = "<group>";
 		};
-		FB6DA00E23D1FCA200B08D63 /* Depature */ = {
+		FBDE1A2E24387DCF005F43D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FBED4A9523C34A2D00A4D306 /* DepaturesViewController.swift */,
-				FB3F06CE23C49A4D00C727A5 /* Depatures.storyboard */,
+				FBDE1A2F24387DE3005F43D1 /* FlightDetail.swift */,
+				FBDE1A3124388444005F43D1 /* FlightType.swift */,
+				FBE2B27623D0203400391427 /* FlightStatus.swift */,
 			);
-			path = Depature;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		FB6DA00F23D1FCC700B08D63 /* FlightDetail */ = {
+		FBEBDBEC243B662300F0E8D6 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				FBEBDBEA243B2AE500F0E8D6 /* FlightsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		FBEBDBED243B663000F0E8D6 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FBF4D27D243C7D8100EAE114 /* FlightsViewController.swift */,
 				FBE2B27423D01FB900391427 /* FlightDetailsViewController.swift */,
-				FBE2B27223D01F3700391427 /* FlightDetails.storyboard */,
 			);
-			path = FlightDetail;
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		FBEBDBF0243C74B600F0E8D6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FBEBDBF1243C74CE00F0E8D6 /* DateInteractor.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB4FAF1F23B76CCF00C424C3 /* Build configuration list for PBXNativeTarget "MSQ Timetable" */;
 			buildPhases = (
+				DEA7D95E19E5ED903505C316 /* [CP] Check Pods Manifest.lock */,
 				FB4FAF0723B76CCE00C424C3 /* Sources */,
 				FB4FAF0823B76CCE00C424C3 /* Frameworks */,
 				FB4FAF0923B76CCE00C424C3 /* Resources */,
+				B55370C3F30445906E4CC82F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,11 +252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB4FAF1B23B76CCF00C424C3 /* LaunchScreen.storyboard in Resources */,
-				FB3F06D223C49A5F00C727A5 /* More.storyboard in Resources */,
 				FB4FAF1823B76CCF00C424C3 /* Assets.xcassets in Resources */,
 				FBE2B27323D01F3700391427 /* FlightDetails.storyboard in Resources */,
-				FB3F06CD23C49A3800C727A5 /* Arrivals.storyboard in Resources */,
-				FB3F06CF23C49A4D00C727A5 /* Depatures.storyboard in Resources */,
 				FB4FAF1623B76CCE00C424C3 /* Main.storyboard in Resources */,
 				FB4A8D7E23CCEE8F0039DA35 /* FlightCell.xib in Resources */,
 			);
@@ -220,45 +261,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B55370C3F30445906E4CC82F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MSQ Timetable/Pods-MSQ Timetable-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MSQ Timetable/Pods-MSQ Timetable-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MSQ Timetable/Pods-MSQ Timetable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEA7D95E19E5ED903505C316 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MSQ Timetable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FB4FAF0723B76CCE00C424C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB4FAF2323B78FFF00C424C3 /* NetworkManager.swift in Sources */,
-				FB4FAF1323B76CCE00C424C3 /* ArrivalsViewController.swift in Sources */,
-				FBED4A9623C34A2D00A4D306 /* DepaturesViewController.swift in Sources */,
-				FB6DA00C23D1D72500B08D63 /* BaseFlightViewController.swift in Sources */,
+				FBA3E73924386D7900F698A4 /* AirportAPIService.swift in Sources */,
+				FBDE1A3224388444005F43D1 /* FlightType.swift in Sources */,
+				FBDE1A3024387DE3005F43D1 /* FlightDetail.swift in Sources */,
 				FB4A8D7D23CCEE8F0039DA35 /* FlightCell.swift in Sources */,
-				FB3F06D523C49B9100C727A5 /* MoreViewController.swift in Sources */,
 				FBE2B27523D01FB900391427 /* FlightDetailsViewController.swift in Sources */,
+				FBEBDBEB243B2AE500F0E8D6 /* FlightsViewModel.swift in Sources */,
+				FBA3E73724386D6E00F698A4 /* AirportAPIRouter.swift in Sources */,
+				FBEBDBF2243C74CE00F0E8D6 /* DateInteractor.swift in Sources */,
 				FB4FAF0F23B76CCE00C424C3 /* AppDelegate.swift in Sources */,
-				FBE2B27723D0203400391427 /* FlightModel.swift in Sources */,
+				FBA3E73524386D6300F698A4 /* AirportAPI.swift in Sources */,
+				FBF4D280243C84F200EAE114 /* Constants.swift in Sources */,
+				FBE2B27723D0203400391427 /* FlightStatus.swift in Sources */,
 				FB6DA03523D3223200B08D63 /* MSQTimetable.xcdatamodeld in Sources */,
+				FBF4D27E243C7D8100EAE114 /* FlightsViewController.swift in Sources */,
 				FB4FAF1123B76CCE00C424C3 /* SceneDelegate.swift in Sources */,
-				FB6DA00A23D1A6D200B08D63 /* DataSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FB3F06CB23C49A3800C727A5 /* Arrivals.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB3F06CC23C49A3800C727A5 /* Base */,
-			);
-			name = Arrivals.storyboard;
-			sourceTree = "<group>";
-		};
-		FB3F06D023C49A5F00C727A5 /* More.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB3F06D123C49A5F00C727A5 /* Base */,
-			);
-			name = More.storyboard;
-			sourceTree = "<group>";
-		};
 		FB4FAF1423B76CCE00C424C3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -394,6 +464,7 @@
 		};
 		FB4FAF2023B76CCF00C424C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 039B57B36BA54E15166BB442 /* Pods-MSQ Timetable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -413,6 +484,7 @@
 		};
 		FB4FAF2123B76CCF00C424C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3FDC3E6B651AB3423CC8B81 /* Pods-MSQ Timetable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
